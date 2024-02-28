@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Directory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: url('bg.jpg'); /* Replace 'background-image.jpg' with your actual image path */
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+        
+
+        .doctor-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: white;
+            
+            text-align: center;
+            float: left;
+            width: 26%; /* three boxes (use 25% for four, and 50% for two, etc) */
+            padding: 5px; 
+        }
+
+        img {
+            max-width: 10%;
+            border-radius: 50%;
+        }
+        header{
+            align-items: center;
+            text-align: center;
+            
+        }
+        body{
+      background: url('bg.jpg'); /* Replace 'background-image.jpg' with your actual image path */
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      padding-bottom: 60px;
+
+      font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 60px; /* Adjust to the height of your button */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    text-align: center;
+    flex-grow: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+    body h1{
+        color: white;
+    }
+   
+        button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color:#4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #297fb8;
+}
+    
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Doctors</h1>
+    </header>
+
+<div id="doctor-list"></div>
+
+<script>
+    // Sample data for 5 doctors
+    var doctors = [
+        {
+            name: "Dr. John Doe",
+            photo: "doctormale.jpg",
+            specialization: "Cardiologist",
+            qualification: "MD, Surgeon"
+        },
+        {
+            name: "Dr. Jane Smith",
+            photo: "doctorfemale.jpg",
+            specialization: "Pediatrician",
+            qualification: "MD, FAAP"
+        },
+        {
+            name: "Dr. David Johnson",
+            photo: "doctormale.jpg",
+            specialization: "Orthopedic Surgeon",
+            qualification: "MD, FACS"
+        },
+        {
+            name: "Dr. Emily Davis",
+            photo: "doctorfemale.jpg",
+            specialization: "Dermatologist",
+            qualification: "MD, FAAD"
+        },
+        {
+            name: "Dr. Michael Brown",
+            photo: "doctormale.jpg",
+            specialization: "Neurologist",
+            qualification: "MD, FANA"
+        },
+        {
+            name: "Dr. Katy Adams",
+            photo: "doctorfemale.jpg",
+            specialization: "Gynacalogist",
+            qualification: "MD, ObGyn"
+        }
+    ];
+
+    // Function to render the list of doctors
+    function renderDoctorList() {
+        var doctorListElement = document.getElementById("doctor-list");
+
+        doctors.forEach(function (doctor) {
+            var doctorCard = document.createElement("div");
+            doctorCard.classList.add("doctor-card");
+
+            var photoElement = document.createElement("img");
+            photoElement.src = doctor.photo;
+            photoElement.alt = doctor.name + " - Photo";
+
+            var nameElement = document.createElement("h2");
+            nameElement.textContent = doctor.name;
+
+            var specializationElement = document.createElement("p");
+            specializationElement.textContent = "Specialization: " + doctor.specialization;
+
+            var qualificationElement = document.createElement("p");
+            qualificationElement.textContent = "Qualification: " + doctor.qualification;
+
+            doctorCard.appendChild(photoElement);
+            doctorCard.appendChild(nameElement);
+            doctorCard.appendChild(specializationElement);
+            doctorCard.appendChild(qualificationElement);
+
+            doctorListElement.appendChild(doctorCard);
+        });
+    }
+
+    // Call the function to render the doctor list
+    renderDoctorList();
+</script>
+
+<div class="container">
+    <a href="http://127.0.0.1:5500/appointmentpage.html">
+    <button class="book-appointment-btn">Book Your Appointment Here</button>
+</a>
+</div>
+
+</body>
+</html>

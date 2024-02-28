@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Appointment</title>
+    <style>
+    
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            background: url('bg.jpg'); /* Replace 'background-image.jpg' with your actual image path */
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+        
+
+        .container {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color:  #4caf50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #297fb8;
+        }
+        body h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Book Your Appointment</h1>
+    <form id="appointmentForm" onsubmit="submitForm(event)">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+            <option value="Dr. John Doe">Dr. John Doe</option>
+            <option value="Dr. Jane Smith">Dr. Jane Smith</option>
+            <option value="Dr. David Johnson">Dr. David Johnson</option>
+            <option value="Dr. Emily Davis">Dr. Emily Davis</option>
+            <option value="Dr. Michael Brown">Dr. Michael Brown</option>
+            
+            <!-- Add more doctor options as needed -->
+        </select>
+
+  
+
+        
+        <div class="container">
+            <a href="http://127.0.0.1:5500/lastpagepage.html">
+        <button type="button" >Book Appointment</button>
+        </a>
+        </div>
+
+    </form>
+</div>
+
+<script src="scriptjs.js"></script>
+</body>
+</html>

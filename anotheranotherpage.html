@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecss.css">
+    <title>Patient Information Form</title>
+    <style>
+        body{
+      background: url('bg.jpg'); /* Replace 'background-image.jpg' with your actual image path */
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Patient Information Form</h2>
+        <form id="patientForm" onsubmit="redirectTodoctorsPage(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+
+            <label for="govtId">Government ID:</label>
+            <input type="text" id="govtId" required>
+
+            <label for="symptoms">Symptoms:</label>
+            <textarea id="symptoms" rows="4" required></textarea>
+
+            <label for="history">Previous Medical History:</label>
+            <textarea id="history" rows="4"></textarea>
+            <a href="http://127.0.0.1:5500/doctorspage.html">
+            <button type="button" >Submit</button>
+        </a>
+
+        </form>
+    </div>
+
+    <script src="scriptjs.js">
+       
+    </script>
+</body>
+</html>
